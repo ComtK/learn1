@@ -9,6 +9,9 @@ import android.view.ViewTreeObserver
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.databinding.DataBindingUtil
+import androidx.lifecycle.ViewModel
+import com.example.learn1.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +25,9 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(baseContext, "${target.text} : ${isChecked}", Toast.LENGTH_SHORT).show()
         }
     }
+
+    lateinit var binding : ActivityMainBinding
+    lateinit var viewmodel : ViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
