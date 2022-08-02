@@ -9,8 +9,6 @@ class TransformActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_transform)
 
-        supportActionBar
-
         var btnTransMain : Button = findViewById(R.id.btnTransMain)
         btnTransMain.setOnClickListener {
             finish()
