@@ -19,6 +19,6 @@
         <item name="postSplashScreenTheme">@style/Theme.Learn1</item>
         <!--dark mode-->
         <item name="android:navigationBarColor">@color/white</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
     </style>
 </resources>

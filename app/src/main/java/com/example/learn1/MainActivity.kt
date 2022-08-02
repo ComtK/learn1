@@ -20,11 +20,6 @@ class MainActivity : AppCompatActivity() {
         if(isChecked){
             var target = findViewById<CheckBox>(buttonView.id)
             Toast.makeText(baseContext, "${target.text} : ${isChecked}", Toast.LENGTH_SHORT).show()
-            /*when(buttonView.id){
-                checkApple.id -> Toast.makeText(baseContext, "${target.text} : ${isChecked}", Toast.LENGTH_SHORT).show()
-                checkOrange.id -> Toast.makeText(baseContext, "${target.text} : ${isChecked}", Toast.LENGTH_SHORT).show()
-                checkBanana.id -> Toast.makeText(baseContext, "${target.text} : ${isChecked}", Toast.LENGTH_SHORT).show()
-            }*/
         }
     }
 
@@ -63,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         tv1.setTextColor(Color.RED)
         tv2.setTextSize(30.0f)
         tv2.setTypeface(Typeface.SERIF, Typeface.BOLD_ITALIC)
-        tv3.setText("가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하가나다라마바사아자차카타파하")
+        tv3.setText("가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하 가나다라마바사아자차카타파하")
         tv3.setSingleLine()
 
         checkApple = findViewById(R.id.checkBox1)
