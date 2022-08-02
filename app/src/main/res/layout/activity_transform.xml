@@ -6,23 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".TransformActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome TransFormActivity"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="#00FF00"
+        android:elevation="5dp"
+        app:tabMode="scrollable"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:tabIndicatorColor="#000000" />
 
-    <Button
-        android:id="@+id/btnTransMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="메인"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

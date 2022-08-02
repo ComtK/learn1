@@ -9,20 +9,12 @@ import android.view.ViewTreeObserver
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.viewpager2.widget.ViewPager2
-import com.example.learn1.common.ViewPagerAdapter
-import com.example.learn1.databinding.ActivityMainBinding
-import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var checkApple : CheckBox
     lateinit var checkOrange : CheckBox
     lateinit var checkBanana : CheckBox
-
-    private lateinit var binding : ActivityMainBinding
-
-    private val tabTitleArray = arrayOf("First Tab", "Second Tab", "Third Tab")
 
     var listner = CompoundButton.OnCheckedChangeListener{buttonView, isChecked ->
         if(isChecked){
@@ -31,21 +23,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
-        binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-//        setContentView(R.layout.activity_main)
-
-        binding.apply {
-            viewPager.adapter = ViewPagerAdapter(supportFragmentManager, lifecycle)
-            TabLayoutMediator(tabLayout, viewPager){
-                tab, position -> tab.text = tabTitleArray[position]
-            }.attach()
-        }
+        setContentView(R.layout.activity_main)
 
         // Set up an OnPreDrawListener to the root view.
         val content: View = findViewById(android.R.id.content)
